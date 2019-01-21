@@ -1,10 +1,10 @@
 module.exports = (number) => {
   return new Promise((resolve, reject) => {
     if (isNaN(number)) {
-      reject();
+     throw new TypeError('not a number');
     }
     if (!Number.isInteger(number) || number < 2) {
-      reject();
+      throw new TypeError('not a valid integer');
     }
     const primes = [2];
     if (number === 2) return primes;
@@ -22,6 +22,5 @@ module.exports = (number) => {
       }
     }
     resolve(primes);
-    // return primes;
   });
 }
