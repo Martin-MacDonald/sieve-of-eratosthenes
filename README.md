@@ -1,12 +1,13 @@
 # Sieve of Eratosthenes
-Calculates all the prime numbers between 2 and the given input
+Calculates all the prime numbers between 2 and the given input.
 
-## Use
+## Usage
 ```sh
 $ npm install --save sieve-of-eratosthenes
 ```
 ```js
 const primeCalculator = require('sieve-of-eratosthenes');
+
 primeCalculator(10).then((primes) => {
   console.log(primes); // [2, 3, 5, 7]
 });
